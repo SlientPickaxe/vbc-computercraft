@@ -1,0 +1,14 @@
+services:
+  vbc:
+    build: .
+    container_name: vbc
+    restart: unless-stopped
+    ports:
+      - "4334:4334"
+    volumes:
+      - ./data/videos:/app/videos
+      - ./data/jobs:/app/jobs
+
+# Note: videos/jobs are bind-mounted to ./data on the host so converted
+# videos survive container rebuilds/updates. Switch to named volumes if
+# you prefer Docker-managed storage instead.

@@ -1,0 +1,9 @@
+.git
+.gitignore
+venv/
+__pycache__/
+*.pyc
+videos/
+jobs/
+assets/demo.mp4
+demo.mp4
